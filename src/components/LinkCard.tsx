@@ -16,7 +16,7 @@ export default function LinkCard({ data, showHandle }: { data: LinkItem; showHan
       href={data.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="card glass flex min-h-[76px] items-center gap-4 rounded-3xl p-3 pr-4"
+      className="card glass flex min-h-[76px] min-w-0 items-center gap-4 rounded-3xl p-3 pr-4"
       style={{ '--accent': data.accent } as unknown as MotionStyle}
     >
       {data.logo ? (
@@ -30,7 +30,7 @@ export default function LinkCard({ data, showHandle }: { data: LinkItem; showHan
       )}
       <span className="min-w-0 flex-1">
         <span className="block font-display text-base font-semibold leading-tight">{data.label}</span>
-        <span className="block truncate text-sm text-white/60">{handle ? `@${handle}` : data.description}</span>
+        <span className="block break-words text-sm text-white/60">{handle ? `@${handle}` : data.description}</span>
       </span>
       <ArrowUpRight size={20} className="shrink-0 text-white/50" aria-hidden="true" />
     </motion.a>
