@@ -59,19 +59,19 @@ export default function App() {
 
         {f.length > 0 && (
           <motion.section aria-label="Get in touch" className="mt-10" variants={list} initial="hidden" animate="show">
-            <div className="grid gap-3">{f.map((x) => <LinkCard key={x.id} data={x} showHandle />)}</div>
+            <div className="grid grid-cols-1 gap-3">{f.map((x) => <LinkCard key={x.id} data={x} showHandle />)}</div>
           </motion.section>
         )}
 
         <motion.section aria-labelledby="brands" className="mt-3" variants={list} initial="hidden" animate="show">
           <h2 id="brands" className="sr-only">Our brands</h2>
-          <div className="grid gap-3">{b.map((x) => <LinkCard key={x.id} data={x} showHandle />)}</div>
+          <div className="grid grid-cols-1 gap-3">{b.map((x) => <LinkCard key={x.id} data={x} showHandle />)}</div>
         </motion.section>
 
         {o.length > 0 && (
           <motion.section aria-labelledby="more" className="mt-12" variants={list} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-60px' }}>
             <h2 id="more" className="mb-4 font-display text-xl font-semibold">More places to find us</h2>
-            <div className="grid gap-3 sm:grid-cols-2">{o.map((x) => <LinkCard key={x.id} data={x} />)}</div>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">{o.map((x) => <LinkCard key={x.id} data={x} />)}</div>
           </motion.section>
         )}
 
